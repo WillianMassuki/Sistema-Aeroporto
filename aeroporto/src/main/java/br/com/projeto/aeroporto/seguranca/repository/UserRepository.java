@@ -1,0 +1,11 @@
+package br.com.projeto.aeroporto.seguranca.repository;
+
+
+import br.com.projeto.aeroporto.seguranca.model.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<Usuario, Long> {
+    Optional<Usuario> findByUsername(String username);
+}
